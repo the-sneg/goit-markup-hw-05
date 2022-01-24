@@ -472,6 +472,26 @@ img {
   color: var(--primary-text-color);
 }
 
+.card-link:hover .overlay-text {
+  transform: translateY(-294px);
+}
+
+.overlay {
+  height: 294px;
+  overflow: hidden;
+}
+
+.overlay-text {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 63px 24px;
+}
+
 /* -------------------HEADER------------------ */
 
 header {
