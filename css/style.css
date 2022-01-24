@@ -109,6 +109,50 @@ img {
   background-color: #188ce8;
 }
 
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.modal {
+  width: 528px;
+  height: 581px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 8px;
+  top: 8px;
+}
+
+.close-icon {
+  /* position: relative;
+  top: 9px;
+  left: 9px;
+  transform: translate(-8px, -7px); */
+  cursor: pointer;
+}
+
 .features-title {
   position: absolute;
   white-space: nowrap;
