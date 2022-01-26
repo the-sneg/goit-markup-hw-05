@@ -102,13 +102,14 @@ img {
   line-height: 1.9;
   color: var(--white-color);
   letter-spacing: 0.06em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .primary-button:hover,
 .primary-button:focus {
   background-color: #188ce8;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop {
@@ -221,7 +222,7 @@ img {
 }
 
 .what-we-do-lable {
-  width: 370px;
+  width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
   position: absolute;
@@ -293,7 +294,7 @@ img {
 /* ------------------------------ICONS------------------------------ */
 
 .social-icon {
-  fill: var(--first-icons-color);
+  fill: currentColor;
 }
 
 .social {
@@ -309,47 +310,32 @@ img {
 }
 
 .social .link {
+  color: var(--first-icons-color);
   width: 44px;
   height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, color;
 }
 
 .social .link:hover,
 .social .link:focus {
   background-color: var(--accent-color);
-
-  cursor: pointer;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social .link:hover .social-icon,
-.social .link:focus .social-icon {
-  fill: var(--icons-white-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--icons-white-color);
 }
 
 .mail-icon {
   margin-right: 10px;
-  fill: var(--second-icons-color);
+  fill: currentColor;
 }
 
 .tel-icon {
   margin-right: 10px;
-  fill: var(--second-icons-color);
-}
-
-.header-contacts:hover .tel-icon,
-.header-contacts:focus .tel-icon,
-.header-contacts:hover .mail-icon,
-.header-contacts:focus .mail-icon {
-  fill: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  fill: currentColor;
 }
 
 .features-lable {
@@ -402,6 +388,9 @@ img {
   font-size: 16px;
   line-height: 1.62;
   color: var(--title-text-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, color, box-shadow;
 }
 
 .current-button {
@@ -415,8 +404,6 @@ img {
   background-color: var(--accent-color);
   color: var(--white-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .example-card {
@@ -426,13 +413,17 @@ img {
   margin-right: 30px;
 }
 
-.card-link:hover,
-.card-link:focus {
+.card-link {
   display: block;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: box-shadow;
+}
+
+.card-link:hover,
+.card-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .example-card:nth-child(3n) {
@@ -473,7 +464,8 @@ img {
   color: var(--primary-text-color);
 }
 
-.card-link:hover .overlay-text {
+.card-link:hover .overlay-text,
+.card-link:focus .overlay-text {
   transform: translateY(-294px);
 }
 
@@ -490,6 +482,7 @@ img {
   background-color: rgba(33, 150, 243, 0.9);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
   padding: 63px 24px;
 }
 
@@ -555,18 +548,22 @@ header {
 }
 
 .header-nav {
+  display: block;
   font-weight: 500;
   line-height: 1.2;
   color: var(--title-text-color);
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .header-nav::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -33px;
+  bottom: -1px;
   width: 100%;
   border: 2px solid var(--accent-color);
   border-radius: 2px;
@@ -583,6 +580,7 @@ header {
 }
 
 .header-contacts {
+  color: var(--second-icons-color);
   font-weight: 500;
   line-height: 1.2;
   color: var(--primary-text-color);
@@ -590,6 +588,9 @@ header {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 /* -------------------------CLIENTS----------------------- */
@@ -609,6 +610,7 @@ header {
 }
 
 .clients-link {
+  color: var(--first-icons-color);
   width: 170px;
   height: 92px;
   border: 1px solid var(--first-icons-color);
@@ -616,16 +618,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color, border-color;
 }
 
 .clients-link:hover,
-.clients-link:focus,
-.clients-link:hover .clients-icon,
-.clients-link:focus .clients-icon {
-  fill: var(--accent-color);
+.clients-link:focus {
+  color: var(--accent-color);
   border-color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-logo {
@@ -637,7 +638,7 @@ header {
 }
 
 .clients-icon {
-  fill: var(--first-icons-color);
+  fill: currentColor;
 }
 
 /* ---------------------FOOTER------------------- */
@@ -674,6 +675,9 @@ header {
   font-style: normal;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.6);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: color;
 }
 
 .footer-contacts:hover,
@@ -683,8 +687,6 @@ header {
 .header-nav:focus,
 .header-nav:hover {
   color: var(--accent-color);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-footer .container {
@@ -718,6 +720,7 @@ header {
 }
 
 .join .link {
+  color: var(--icons-white-color);
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -725,8 +728,16 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color;
 }
 
 .join .social-icon {
-  fill: var(--icons-white-color);
+  fill: currentColor;
+}
+
+.join .social .link:hover,
+.join .social .link:focus {
+  background-color: var(--accent-color);
 }
